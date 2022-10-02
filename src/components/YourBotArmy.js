@@ -3,10 +3,7 @@ import BotCard from "./BotCard";
 
 function YourBotArmy({bots}) {
   //your bot army code here...
-  function onChooseBot(bot){
-    console.log(bot)
 
-  }
 
   return (
     <div className="ui segment inverted olive bot-army">
@@ -16,7 +13,6 @@ function YourBotArmy({bots}) {
             bots.map((bot)=>{
             return(
               <BotCard key={bot.id}>
-                onChooseBot={onChooseBot}
                 bot={bot}
               </BotCard>
             )

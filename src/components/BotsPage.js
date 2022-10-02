@@ -12,10 +12,18 @@ function BotsPage() {
     .then((data)=> setBots(data));
   }, []);
 
+  function addBotsArmy(bot){
+    setChooseBots((prevbot)=>{
+      return [
+        ...prevbot,bot
+      ]
+    })
+  }
+
   return (
     <div>
       <YourBotArmy bots={chooseBots} />
-      <BotCollection bots={bots}/>
+      <BotCollection bots={bots} addBotsArmy={addBotsArmy} />
     </div>
   )
 }
