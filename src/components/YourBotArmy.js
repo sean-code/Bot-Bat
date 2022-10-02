@@ -1,7 +1,7 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function YourBotArmy({bots}) {
+export default function YourBotArmy({bots}) {
   //your bot army code here...
 
 
@@ -24,4 +24,4 @@ function YourBotArmy({bots}) {
   );
 }
 
-export default YourBotArmy;
+

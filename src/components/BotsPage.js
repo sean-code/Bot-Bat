@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
 
-function BotsPage() {
+export default function BotsPage() {
   const [bots, setBots] = useState([]);
   const [chooseBots, setChooseBots] = useState([])
 
@@ -33,7 +33,7 @@ function BotsPage() {
     fetch(`http://localhost:8002/bots/${bot.id}`,deleteConfig)
       .then(()=>setBots(filterbots))
   }
-
+  
     return (
       <div>
         <YourBotArmy bots={chooseBots} />
@@ -41,4 +41,3 @@ function BotsPage() {
       </div>
     )
 }
-export default BotsPage;

@@ -9,7 +9,7 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotCard({ bot, deleteBotsArmy, addBotsArmy}) {
+export default function BotCard({ bot, deleteBotsArmy, addBotsArmy}) {
 
 
   function  handleClick(chooseBot){
@@ -73,4 +73,3 @@ function BotCard({ bot, deleteBotsArmy, addBotsArmy}) {
   );
 }
 
-export default BotCard;

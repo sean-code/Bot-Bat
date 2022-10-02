@@ -9,7 +9,7 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotSpecs({ bot }) {
+export default function BotSpecs({ bot }) {
   return (
     <div className="ui segment">
       <div className="ui two column centered grid">
@@ -75,4 +75,4 @@ function BotSpecs({ bot }) {
   );
 }
 
-export default BotSpecs;
+

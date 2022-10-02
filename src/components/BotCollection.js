@@ -1,7 +1,7 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function BotCollection({bots, addBotsArmy, deleteBotsArmy}) {
+export default function BotCollection({bots, addBotsArmy, deleteBotsArmy}) {
   // Your code here
   const robotsList = bots.map((bot)=>{
     return(
@@ -20,4 +20,3 @@ function BotCollection({bots, addBotsArmy, deleteBotsArmy}) {
   );
 }
 
-export default BotCollection;

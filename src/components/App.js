@@ -1,7 +1,7 @@
 import React from "react";
 import BotsPage from "./BotsPage";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <BotsPage />
@@ -9,4 +9,3 @@ function App() {
   );
 }
 
-export default App;
