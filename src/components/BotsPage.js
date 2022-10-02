@@ -20,12 +20,25 @@ function BotsPage() {
     })
   }
 
-  return (
-    <div>
-      <YourBotArmy bots={chooseBots} />
-      <BotCollection bots={bots} addBotsArmy={addBotsArmy} />
-    </div>
-  )
-}
+  function deleteBotsArmy(bot){
+    const filterbots = bots.filter(
+			(singlebot) => singlebot.id !==  bot.id
+		);
+    const   deleteConfig =  {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      } 
+    }
+    fetch(`http://localhost:8002/bots/${bot.id}`,deleteConfig)
+      .then(()=>setBots(filterbots))
+  }
 
+    return (
+      <div>
+        <YourBotArmy bots={chooseBots} />
+        <BotCollection bots={bots} addBotsArmy={addBotsArmy} deleteBotsArmy={deleteBotsArmy} />
+      </div>
+    )
+}
 export default BotsPage;
