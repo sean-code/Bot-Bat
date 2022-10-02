@@ -12,8 +12,7 @@ function YourBotArmy({bots}) {
           {
             bots.map((bot)=>{
             return(
-              <BotCard key={bot.id}>
-                bot={bot}
+              <BotCard key={bot.id} bot={bot}>
               </BotCard>
             )
           }
