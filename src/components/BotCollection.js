@@ -3,7 +3,7 @@ import BotCard from "./BotCard";
 
 function BotCollection({bots}) {
   // Your code here
-  const robots = bots.map((bot)=>{
+  const robotsList = bots.map((bot)=>{
     return(
       <BotCard bot={bot}>
       </BotCard>
@@ -13,8 +13,8 @@ function BotCollection({bots}) {
   return (
     <div className="ui four column grid">
       <div className="row">
-        <h1>Collection of all bots</h1>
-        {robots}
+        <h2>Collection of all bots</h2>
+        {robotsList}
       </div>
     </div>
   );
