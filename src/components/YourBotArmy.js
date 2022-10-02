@@ -1,6 +1,7 @@
 import React from "react";
+import BotCard from "./BotCard";
 
-function YourBotArmy() {
+function YourBotArmy({bots}) {
   //your bot army code here...
 
   return (
